@@ -15,7 +15,6 @@ my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.co
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
 
 
 #####################
@@ -41,5 +40,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 #Display the table of the page
 
 streamlit.dataframe(fruits_to_show)
+
+streamlit.header('Fruityvice Fruit Advice!')
+streamlit.text(fruityvice_response.json())
 
 
