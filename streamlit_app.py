@@ -5,6 +5,7 @@
 import streamlit
 import pandas
 import requests
+import snowflake.connector
 
 #####################################
 #Variable declarations and functions#
